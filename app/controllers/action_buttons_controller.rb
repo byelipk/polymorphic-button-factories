@@ -1,0 +1,2 @@
+class ActionButtonsController < ApplicationController
+end
