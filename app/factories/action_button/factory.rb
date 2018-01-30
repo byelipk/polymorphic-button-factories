@@ -1,14 +1,25 @@
 module ActionButton
   class Factory
     # A factory's job is to manufacture the correct player of a role.
-    # They don't know what to do, they know how to choose who does.
-    # Use polymorphism instead of conditionals that know:
+    # Factories don't know what to do, they know how to choose who does.
+    #
+    # Conditionals that know:
+    #
     #   1) why you might need one condition over another
-    #   2) and knows the behavior needed in that case
+    #   2) the behavior needed in that case
+    #
+    # are evil! 😼
+    #
+    # Instead we can use factories with polymorphism. The factory
+    # will figure out which class to use based on certain conditions.
+    # It knows nothing of the behavior. This separation of concerns 
+    # makes our code resiliant to change, easy to reason about, and 
+    # very extensible.
 
     # Open factory
     # ------------
     # + No conditionals
+    # + Very extensible if we follow the pattern
     # - Harder to understand
     # - No explicit class references in code
     # - Ignores classes whose name does not follow convention
@@ -46,6 +57,8 @@ module ActionButton
         ActionButton::Recommend
       when :recommended
         ActionButton::Recommended
+      when :like_with_count
+        ActionButton::LikeWithCount
       else
         ActionButton::Default
       end.new(options)

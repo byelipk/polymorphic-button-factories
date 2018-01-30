@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post "action_buttons/success"
   post "action_buttons/recommend"
   post "action_buttons/recommended"
+  put "action_buttons/like_with_count"
 end

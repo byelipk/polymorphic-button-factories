@@ -48,3 +48,11 @@ en:
       text: 
         initial: "You recommended this person"
         disabled: "Oh snap..."
+    like_with_count:
+      text: 
+        initial: "Like"
+        disabled: "Liking..."
+    liked_with_count:
+      text: 
+        initial: "Liked"
+        disabled: "Un-liking..."

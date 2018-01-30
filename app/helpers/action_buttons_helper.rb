@@ -14,4 +14,11 @@ module ActionButtonsHelper
   def recommended_button
     ActionButton::Factory.for(:recommended, params).render
   end
+
+  def like_with_count_button
+    ActionButton::Factory.for(
+      :like_with_count, 
+      params.merge({ count: @count })
+    ).render
+  end
 end

@@ -1,0 +1,8 @@
+var list        = document.querySelector(".btn-list");
+var oldBtnGroup = document.querySelector(".btn-group__like");
+var fragment    = document.createRange().createContextualFragment("<%= j like_with_count_button %>");
+var newBtnGroup = fragment.querySelector(".btn-group");
+
+alert("You Liked someone!");
+
+list.replaceChild(newBtnGroup, oldBtnGroup);
