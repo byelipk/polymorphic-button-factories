@@ -13,13 +13,13 @@ module ActionButton
     # - No explicit class references in code
     # - Ignores classes whose name does not follow convention
     #
-    def self.for(type, options={})
-      begin
-        const_get("ActionButton::#{type.to_s.camelize}")
-      rescue NameError
-        Default
-      end.new(options)
-    end
+    # def self.for(type, options={})
+    #   begin
+    #     const_get("ActionButton::#{type.to_s.camelize}")
+    #   rescue NameError
+    #     Default
+    #   end.new(options)
+    # end
 
     # Closed factory
     # --------------
@@ -28,27 +28,27 @@ module ActionButton
     # - Uses conditionals
     # - Not open
     # - More complex to extend
-    # def self.for(type, options={})
-    #   case type
-    #   when :success
-    #     ActionButton::Success
-    #   when :accept
-    #     ActionButton::Accept
-    #   when :message
-    #     ActionButton::Message
-    #   when :connect
-    #     ActionButton::Connect
-    #   when :request_sent
-    #     ActionButton::RequestSent
-    #   when :welcomed
-    #     ActionButton::Welcomed
-    #   when :recommend
-    #     ActionButton::Recommend
-    #   when :recommended
-    #     ActionButton::Recommended
-    #   else
-    #     ActionButton::Default
-    #   end.new(options)
-    # end
+    def self.for(type, options={})
+      case type
+      when :success
+        ActionButton::Success
+      when :accept
+        ActionButton::Accept
+      when :message
+        ActionButton::Message
+      when :connect
+        ActionButton::Connect
+      when :request_sent
+        ActionButton::RequestSent
+      when :welcomed
+        ActionButton::Welcomed
+      when :recommend
+        ActionButton::Recommend
+      when :recommended
+        ActionButton::Recommended
+      else
+        ActionButton::Default
+      end.new(options)
+    end
   end
 end

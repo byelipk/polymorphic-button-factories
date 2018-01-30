@@ -27,13 +27,6 @@ module ActionButton
     def disabled_text
       I18n.t("action_buttons.#{type}.text.disabled")
     end
-
-    def show_test_variation_icon?
-      if options[:test_variation] == "v2"
-        true
-      else
-        false
-      end
-    end
+    
   end
 end

@@ -1,6 +1,6 @@
-<%= link_to @button.path, data: { remote: true, method: :post, "disable-with": @button.disabled_text }, class: "btn btn-danger" do %>
+<%= link_to @button.path, data: { remote: true, method: :post, "disable-with": "😱 #{@button.disabled_text}" }, class: "btn btn-danger" do %>
   <% if @button.show_test_variation_icon? %>
-    <span>😱</span>
+    <span>👌</span>
   <% end %>
   <%= @button.text %>
 <% end %>
