@@ -21,4 +21,12 @@ module ActionButtonsHelper
       params.merge({ count: @count })
     ).render
   end
+
+  def unlike_with_count_button
+    ActionButton::Factory.for(
+      :unlike_with_count, 
+      params.merge({ count: @count })
+    ).render
+  end
+
 end

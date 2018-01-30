@@ -59,6 +59,8 @@ module ActionButton
         ActionButton::Recommended
       when :like_with_count
         ActionButton::LikeWithCount
+      when :unlike_with_count
+        ActionButton::UnlikeWithCount
       else
         ActionButton::Default
       end.new(options)

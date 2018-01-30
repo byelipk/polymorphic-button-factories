@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post "action_buttons/recommend"
   post "action_buttons/recommended"
   put "action_buttons/like_with_count"
+  put "action_buttons/unlike_with_count"
 end

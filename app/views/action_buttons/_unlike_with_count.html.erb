@@ -1,0 +1,7 @@
+<div class="btn-group btn-group__like" role="group" aria-label="Button with count">
+  <%= link_to @button.path, data: { method: :put, remote: true, "disable-with": @button.disabled_text }, class: "btn btn-secondary" do %>
+    <span>🤬</span>
+    <%= @button.text %>
+  <% end %>
+  <button type="button" class="btn btn-light"><%= @button.count %></button>
+</div>

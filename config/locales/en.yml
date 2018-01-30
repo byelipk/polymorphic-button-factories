@@ -52,7 +52,7 @@ en:
       text: 
         initial: "Like"
         disabled: "Liking..."
-    liked_with_count:
+    unlike_with_count:
       text: 
         initial: "Liked"
         disabled: "Un-liking..."

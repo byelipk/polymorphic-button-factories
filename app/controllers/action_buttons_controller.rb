@@ -28,4 +28,10 @@ class ActionButtonsController < ApplicationController
 
     sleep 1
   end
+
+  def unlike_with_count
+    @count = params[:count].to_i - 1
+
+    sleep 1
+  end
 end

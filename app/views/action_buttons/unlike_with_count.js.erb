@@ -1,8 +1,8 @@
 var list        = document.querySelector(".btn-list");
 var oldBtnGroup = document.querySelector(".btn-group__like");
-var fragment    = document.createRange().createContextualFragment("<%= j unlike_with_count_button %>");
+var fragment    = document.createRange().createContextualFragment("<%= j like_with_count_button %>");
 var newBtnGroup = fragment.querySelector(".btn-group");
 
-alert("You're making someone very happy right now!");
+alert("You crushed someone's hopes and dreams!");
 
 list.replaceChild(newBtnGroup, oldBtnGroup);
