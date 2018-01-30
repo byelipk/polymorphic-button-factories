@@ -3,12 +3,12 @@ module ActionButton
     # A factory's job is to manufacture the correct player of a role.
     # Factories don't know what to do, they know how to choose who does.
     #
-    # Conditionals that know:
+    # Code that knows:
     #
     #   1) why you might need one condition over another
     #   2) the behavior needed in that case
     #
-    # are evil! 😼
+    # is evil! 😼
     #
     # Instead we can use factories with polymorphism. The factory
     # will figure out which class to use based on a single condition.
