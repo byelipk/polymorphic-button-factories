@@ -11,7 +11,7 @@ module ActionButton
     # are evil! 😼
     #
     # Instead we can use factories with polymorphism. The factory
-    # will figure out which class to use based on certain conditions.
+    # will figure out which class to use based on a single condition.
     # It knows nothing of the behavior. This separation of concerns 
     # makes our code resiliant to change, easy to reason about, and 
     # very extensible.
@@ -20,7 +20,7 @@ module ActionButton
     # ------------
     # + No conditionals
     # + Very extensible if we follow the pattern
-    # - Harder to understand
+    # - Harder to understand because it uses metaprogramming
     # - No explicit class references in code
     # - Ignores classes whose name does not follow convention
     #
@@ -36,6 +36,7 @@ module ActionButton
     # --------------
     # + Understands the reasons for switching
     # + Knows the name of the class that supplies the behavior
+    # + Not coupled to a naming convention
     # - Uses conditionals
     # - Not open
     # - More complex to extend
