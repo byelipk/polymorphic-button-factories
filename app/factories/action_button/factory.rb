@@ -47,12 +47,6 @@ module ActionButton
         ActionButton::Accept
       when :message
         ActionButton::Message
-      when :connect
-        ActionButton::Connect
-      when :request_sent
-        ActionButton::RequestSent
-      when :welcomed
-        ActionButton::Welcomed
       when :recommend
         ActionButton::Recommend
       when :recommended
