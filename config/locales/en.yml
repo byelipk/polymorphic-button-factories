@@ -31,3 +31,20 @@
 
 en:
   hello: "Hello world"
+  action_buttons:
+    default:
+      text: 
+        initial: "Press me"
+        disabled: "Things..."
+    success:
+      text: 
+        initial: "Nice job!"
+        disabled: "Wow..."
+    recommend:
+      text: 
+        initial: "Recommend"
+        disabled: "Recommending..."
+    recommended:
+      text: 
+        initial: "You recommended this person"
+        disabled: "Oh snap..."

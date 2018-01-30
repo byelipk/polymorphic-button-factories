@@ -1,0 +1,3 @@
+<%= link_to @button.path, data: { remote: true, method: :post, "disable-with": @button.disabled_text }, class: "btn btn-success" do %>
+  <%= @button.text %>
+<% end %>

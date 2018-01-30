@@ -1,0 +1,8 @@
+var list     = document.querySelector(".btn-list");
+var oldBtn   = document.querySelector(".btn-list .btn-primary");
+var fragment = document.createRange().createContextualFragment("<%= j recommended_button %>");
+var newBtn   = fragment.querySelector("a");
+
+alert("You recommended someone!");
+
+list.replaceChild(newBtn, oldBtn);
