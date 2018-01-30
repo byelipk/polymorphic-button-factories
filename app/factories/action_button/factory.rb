@@ -69,10 +69,6 @@ module ActionButton
       case type
       when :success
         ActionButton::Success
-      when :accept
-        ActionButton::Accept
-      when :message
-        ActionButton::Message
       when :recommend
         ActionButton::Recommend
       when :recommended
