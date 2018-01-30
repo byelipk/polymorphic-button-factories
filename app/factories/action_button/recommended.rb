@@ -7,7 +7,7 @@ module ActionButton
     end
 
     def path
-      action_buttons_recommended_path(test_variation: "v2")
+      action_buttons_recommended_path
     end
 
   end
