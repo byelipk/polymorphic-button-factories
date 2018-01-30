@@ -5,10 +5,35 @@ module ActionButton
     #
     # Code that knows:
     #
-    #   1) why you might need one condition over another
+    #   1) why one condition applies over another
     #   2) the behavior needed in that case
     #
     # is evil! 😼
+    #
+    # For example, look at this contrived code:
+    #
+    #   def get_button_type(number)
+    #     case number
+    #     when 1
+    #       number > 1 ? 1 : 0
+    #     when 2
+    #       2
+    #     when number > 8
+    #       number % 2 == 0 ? number : number + 1
+    #     else
+    #       number * 3
+    #     end
+    #   end
+    #
+    # This example knows the answers to a few subtle questions:
+    #
+    #   How many different kinds of numbers are there?
+    #   Which numbers are most alike? In what way?
+    #   Which numbers are most different? In what way?
+    #   What is the rule to determine the behavior given a number?
+    #
+    # This code is hard to change because it has intimate knowledge
+    # of so many details.
     #
     # Instead we can use factories with polymorphism. The factory
     # will figure out which class to use based on a single condition.
