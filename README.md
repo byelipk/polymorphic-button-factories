@@ -94,3 +94,10 @@ module ActionButton
   end
 end
 ```
+
+# Files and directories to look at
+
+1. `app/factories`
+2. `app/controllers/action_buttons_controller.rb`
+3. `routes.rb`
+4. `app/views/action_buttons`
